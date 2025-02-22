@@ -1,0 +1,8 @@
+real estate details in card
+id - by default
+property image from all images
+area located
+price range in rupees
+number of bedrooms bathrooms and kitchen
+for joint family or not
+
