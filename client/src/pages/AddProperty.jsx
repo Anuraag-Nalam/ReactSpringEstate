@@ -9,6 +9,7 @@ const AddProperty = () => {
     })
     const [confirmationMessage, setConfirmationMessage] = useState()
     const handleChange = (e) => {
+        setConfirmationMessage('')
         setProperty({
             ...property,
             [e.target.name]: e.target.value,
@@ -27,6 +28,7 @@ const AddProperty = () => {
             });
 
             if (response.ok) {
+                console.log('came in this block')
                 setConfirmationMessage('Property added successfully')
             } else {
                 setConfirmationMessage('Error adding property')
@@ -90,6 +92,7 @@ const AddProperty = () => {
                         <button type="button" class="btn btn-primary">Back</button>
                     </Link>
                 </div>
+                {confirmationMessage ? confirmationMessage : ''}
             </div>
 
         </>
